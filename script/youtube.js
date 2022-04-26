@@ -1,3 +1,28 @@
+/****** 
+配置
+scopyright = youtube搜索Happy白嫖
+telegram = https://t.me/baipiao_666
+
+#!name=Youtube
+#!desc=跳过视频广告
+#!system=ios-quantumult x
+
+[rewrite_local]
+
+(^https?:\/\/[\w-]+\.googlevideo\.com\/.+)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
+^https?:\/\/.+?\.(googlevideo|googleapis)\.com\/.+(player\/ad_break|&oad) url reject
+[MITM]
+hostname = *.googlevideo.com,*.googleapis.com
+
+
+#!name=Youtube
+#!desc=跳过视频广告
+#!system=ios-Loon
+
+[Script]
+
+http-request ^https?:\/\/.+?\.(googlevideo|googleapis)\.com\/.+(player\/ad_break|(&oad|ctier=L)) script-path=https://gitee.com/bp233/script/raw/master/script/youtube.js, requires-body=false, timeout=10, tag=tiktok
+
 [MITM]
 hostname = *.googlevideo.com,*.googleapis.com
 
