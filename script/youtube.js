@@ -48,7 +48,7 @@ const isQuanX = typeof $task != "undefined";
 const isLoon = typeof $loon != "undefined";
 // 关闭请求
 if (isQuanX) {
-        let status = "HTTP/1.1 302 Found";
+        let status = "HTTP/1.1 302";
     }else{
         let status = 302;
     }
