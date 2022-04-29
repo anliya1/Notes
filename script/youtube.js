@@ -40,18 +40,9 @@ hostname = %APPEND% *.byteoversea.com,*.tiktokv.com
 
 *******/
 
-// 判断是否是Surge
-const isSurge = typeof $httpClient != "undefined";
-// 判断是否是QuanX
-const isQuanX = typeof $task != "undefined";
-// 判断是否是Loon
-const isLoon = typeof $loon != "undefined";
-// 关闭请求
-if (isQuanX) {
-        let status = "HTTP/1.1 302";
-    }else{
-        let status = 302;
-    }
+
+     
+let status = 302;
 if ($request.url.indexOf("&oad") != -1) {
   $done({ response: {body: ""} });
 } else if ($request.url.indexOf("&ctier") != -1) {
