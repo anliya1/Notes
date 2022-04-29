@@ -21,7 +21,7 @@ hostname = *.googlevideo.com,*.googleapis.com
 
 [Script]
 
-http-request ^https?:\/\/.+?\.(googlevideo|googleapis)\.com\/.+(player\/ad_break|(&oad|ctier=L)) script-path=https://gitee.com/bp233/script/raw/master/script/youtube.js, requires-body=false, timeout=10, tag=tiktok
+http-request ^https?:\/\/.+?\.(googlevideo|googleapis)\.com\/.+(player\/ad_break|(&oad|ctier=L)) script-path=https://raw.githubusercontent.com/anliya1/Notes/master/script/youtube.js, requires-body=false, timeout=10, tag=tiktok
 
 [MITM]
 hostname = *.googlevideo.com,*.googleapis.com
@@ -33,7 +33,7 @@ hostname = *.googlevideo.com,*.googleapis.com
 #！shadawrocket 删除hostname=后面的 %APPEND%
 [Script]
 
-tiktok=type=http-request,pattern=^https?:\/\/.+?\.(googlevideo|googleapis)\.com\/.+(player\/ad_break|(&oad|ctier=L)),requires-body=0,script-path=https://anliya.xyz/ipa/123.js
+tiktok=type=http-request,pattern=^https?:\/\/.+?\.(googlevideo|googleapis)\.com\/.+(player\/ad_break|(&oad|ctier=L)),requires-body=0,script-path=https://raw.githubusercontent.com/anliya1/Notes/master/script/youtube.js
 
 [MITM]
 hostname = %APPEND% *.byteoversea.com,*.tiktokv.com
