@@ -2,7 +2,6 @@
 "data":{
     "cpde":10086,
     "url1":"https://haijiao.com/api/topic/",
-    "url2":"https://haijiao.com/api/topic/att/"
-    
+    "url2":"https://haijiao.com/api/topic/att/"  
 }   
 }
