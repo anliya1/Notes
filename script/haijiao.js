@@ -3,7 +3,7 @@ let obj = JSON.parse(body);
 
 
  for(let a in obj.data.attachments){
-    if(obj.data.attachments[a].coverUrl =='video'){
+    if(obj.data.attachments[a].coverUrl){
         let id =obj.data.attachments[a].id;
         let url =obj.data.attachments[a].remoteUrl;
         let aa ='/'+id+'_i';
