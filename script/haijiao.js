@@ -1,6 +1,6 @@
 let body = $response.body;
 let obj = JSON.parse(body);
-
+obj.data.type= 0;
 
  for(let a in obj.data.attachments){
     if(obj.data.attachments[a].coverUrl){
