@@ -1,7 +1,6 @@
 {
 'code' :10086,
- "api1":"api/topic/",
- "api2":"api/topic/att/" ,
- 'msg':'',
-
+'url1':'https://hjedd.com/api/topic/',
+'url2':'https://hjedd.com/api/topic/att/', 
+'msg':'',
 }
