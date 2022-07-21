@@ -3,7 +3,7 @@
 'data':{
     'url1':"https://hjedd.com/api/topic/',
     'url2':"https://hjedd.com/api/topic/att/' 
-} ,
+ },
 'tg':'https://t.me/baipiao_666',
 'msg':'在线解析',
 }
