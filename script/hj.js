@@ -1,13 +1,7 @@
-let body = $response.body;
-let obj = JSON.parse(body);
-let id = 123 ;
- for(let a in obj.data.attachments){
-    if(obj.data.attachments[a].coverUrl){
-        id =obj.data.attachments[a].id;
-    }
- }
+function httpa (my) {
+return new Promise((resolve, reject) =>{
 
-let url = `https://hjedd.com/api/topic/att/`+id;
+const url = `https://hjedd.com/api/topic/att/`+my;
 const method = `GET`;
 const headers = {
 'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Mobile/15E148 Safari/604.1`,
@@ -17,24 +11,29 @@ const headers = {
 'Accept-Encoding' : `gzip, deflate, br`,
 'Accept' : `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`
 };
-const bo = ``;
+const body = ``;
 
 const myRequest = {
     url: url,
     method: method,
     headers: headers,
-    body: bo
+    body: body
 };
-if(id != 123){
- fetch(myRequest)
-  .then(response => {
-     return response.json();
-  })
-  .then(data => {
-     let o = JSON.parse(data.body);
-     let b =o.data[0].url;
-  })
-  .catch(error => console.error(error));
-}
-obj.data.attachments[a].remoteUrl =b;
-$done({ body: JSON.stringify(obj) });
+$task.fetch(myRequest).then(response => {
+	resolve(response.body);
+   
+}, reason => {
+    console.log(reason.error);
+	reject(reason.error);
+});
+})};
+
+
+ async function haijiao(){
+  
+  let a = await httpa('1987885');
+   console.log(a);
+ console.log('nihao');
+};
+
+haijiao();
