@@ -27,11 +27,12 @@ const myRequest = {
 };
 $task.fetch(myRequest).then(response => {
      a = JSON.parse(response.body)
-a.data[0].url);
+ obj.data.attachments[a].remoteUrl=a.data[0].url
+ $done({ body: JSON.stringify(obj) });
+});
 }, reason => {
     console.log(reason.error);
     $done();
 });
     }
  }
-$done({ body: JSON.stringify(obj) });
