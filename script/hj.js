@@ -3,10 +3,10 @@
  * @fileoverview Template to compose HTTP reqeuest.
  * 
  */
-function httpa (my) {
+function httpa (id) {
 return new Promise((resolve, reject) =>{
 
-const url = my;
+const url = 'https://hjedd.com/api/topic/att/'+id;
 const method = `GET`;
 const headers = {
 'User-Agent' : `Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Mobile/15E148 Safari/604.1`,
@@ -42,7 +42,7 @@ $task.fetch(myRequest).then(response => {
   for(let a in obj1.data.attachments){
     if(obj1.data.attachments[a].coverUrl){
         let id =obj1.data.attachments[a].id;
-        let o = await httpa('https://hjedd.com/api/topic/att/'+id);
+        let o = await httpa(id);
 	   let obj2 = JSON.parse(o);
         obj1.data.attachments[a].remoteUrl =obj2.data[0].url;
 	   // console.log(obj1.data.attachments[a].remoteUrl);
