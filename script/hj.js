@@ -17,13 +17,13 @@ const headers = {
 'Accept-Encoding' : `gzip, deflate, br`,
 'Accept' : `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`
 };
-const body = ``;
+const bo = ``;
 
 const myRequest = {
     url: url,
     method: method,
     headers: headers,
-    body: body
+    body: bo
 };
 
 $task.fetch(myRequest).then(response => {
