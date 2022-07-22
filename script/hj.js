@@ -44,7 +44,7 @@ $task.fetch(myRequest).then(response => {
         let id =obj1.data.attachments[a].id;
         let o = await httpa(id);
 	   let obj2 = JSON.parse(o);
-        obj1.data.attachments[a].remoteUrl =obj2.data[0].url;
+        obj1.data.attachments[a].remoteUrl =obj2.data[0].url.replace(/(?<=_i)\w{32}(?=(.m3u8))/g,'');
 	   // console.log(obj1.data.attachments[a].remoteUrl);
 	   $done({ body: JSON.stringify(obj1) });
     }
