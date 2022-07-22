@@ -1,6 +1,6 @@
 let body = $response.body;
 let obj = JSON.parse(body);
-let id ;
+let id = 123 ;
  for(let a in obj.data.attachments){
     if(obj.data.attachments[a].coverUrl){
         id =obj.data.attachments[a].id;
@@ -25,13 +25,13 @@ const myRequest = {
     headers: headers,
     body: bo
 };
-
+if(id != 123){
 $task.fetch(myRequest).then(response => {
    let o = JSON.parse(response.body);
     let b =o.data[0].url;
 }, reason => {
     console.log(reason.error);
-    $done();
 });
+}
 obj.data.attachments[a].remoteUrl =b;
 $done({ body: JSON.stringify(obj) });
