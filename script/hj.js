@@ -26,12 +26,15 @@ const myRequest = {
     body: bo
 };
 if(id != 123){
-$task.fetch(myRequest).then(response => {
-   let o = JSON.parse(response.body);
-    let b =o.data[0].url;
-}, reason => {
-    console.log(reason.error);
-});
+ fetch(myRequest)
+  .then(response => {
+     return response.json();
+  })
+  .then(data => {
+     let o = JSON.parse(data.body);
+     let b =o.data[0].url;
+  })
+  .catch(error => console.error(error));
 }
 obj.data.attachments[a].remoteUrl =b;
 $done({ body: JSON.stringify(obj) });
