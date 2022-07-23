@@ -40,6 +40,8 @@ $task.fetch(myRequest).then(response => {
         obj1.data.attachments[a].remoteUrl =obj2.data[0].url;
 	   // console.log(obj1.data.attachments[a].remoteUrl);
 	   $done({ body: JSON.stringify(obj1) });
+    }else{
+	$done();    
     }
  }
 };
