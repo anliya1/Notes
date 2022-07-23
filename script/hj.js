@@ -6,9 +6,9 @@
 function httpa (id) {
 return new Promise((resolve, reject) =>{
 
-const url = 'https://'+$reqeuest.headers[Host]+'/api/topic/att/'+id;
-const method = $reqeuest.method;
-const headers = $reqeuest.headers;
+let url = 'https://'+$request.headers[Host]+'/api/topic/att/'+id;
+let method = $reqeuest.method;
+let headers = $reqeuest.headers;
 const body = ``;
 
 const myRequest = {
