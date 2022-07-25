@@ -1,8 +1,7 @@
 {
 "code":10086,
 "data":{
-    "url1":"/api/topic/",
-    "url2":"/api/topic/att/"
+    "url1":"https://haijiao.com/api/topic/",
  },
 "tg":"https://t.me/baipiao_666",
 "msg":"在线解析"
