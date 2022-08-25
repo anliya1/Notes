@@ -14,7 +14,7 @@
     }
 }
 
-//watermark($response.body);
+watermark($response.body);
 
 function Follow(data) {
     if (data && data.length > 0) {
