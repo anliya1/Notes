@@ -11,7 +11,7 @@
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>ipa包URL（必填）</string>
+                    <string>http://localhost/</string>
                 </dict>
                 <dict>
                     <key>kind</key>
@@ -41,7 +41,7 @@
                 <key>subtitle</key>
                 <string>副标题（非必填）</string>
                 <key>title</key>
-                <string>应用名（必填）</string>
+                <string>正在安装</string>
             </dict>
         </dict>
     </array>
