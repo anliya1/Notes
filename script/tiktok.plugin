@@ -8,7 +8,7 @@
 # TikTok解锁
 (?<=_region=)CN(?=&) 307 JP
 (?<=&mcc_mnc=)460[0-1][0-9](?=&) 307 44001
-^(https:\/\/.+\.tiktokv\.com\/aweme\/)v2(\/feed\/) 307 $1v1$2
+# ^(https:\/\/.+\.tiktokv\.com\/aweme\/)v2(\/feed\/) 307 $1v1$2
 ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) 302 $1$3
 (?<=&carrier=)[%A-Z0-9]+(?=&) 307 docomo
 (?<=tz_name=)Asia/Shanghai(?=&) 307 Asia/Tokyo
