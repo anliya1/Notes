@@ -1,12 +1,13 @@
-#!name = YouTube去广告（A方案）
+#!name = TikTok解锁（JP方案）
 #!desc = 采用新的方法过滤视频、瀑布流、搜索和Shorts中的广告，并删除底部的上传按钮，Premium订阅用户请勿使用。注意，此方案可能会偶现广告，且不能与其他具有YouTube广告过滤能力的插件使用。
 #!openUrl = 
 #!author = baupiao666 
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!homepage = https://raw.githubusercontent.com/anliya1/Notes/master/script/tiktok.plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/TikTok.png
 
 [Rewrite]
 (?<=_region=)CN(?=&) JP 307 
+
 (?<=&mcc_mnc=)460[0-1][0-9](?=&) 44001 307 
 ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3  302
 (?<=&carrier=)[%A-Z0-9]+(?=&) docomo 307
