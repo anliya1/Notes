@@ -1,6 +1,5 @@
 #!name = TikTok解锁（JP方案）
-#!desc = 采用新的方法过滤视频、瀑布流、搜索和Shorts中的广告，并删除底部的上传按钮，Premium订阅用户请勿使用。注意，此方案可能会偶现广告，且不能与其他具有YouTube广告过滤能力的插件使用。
-#!openUrl = 
+#!desc = iOS系统版本：16.2 （支持向下兼容），TikTok版本：Version 27.1.0（前置操作：从 iTunes for Windows V 12.6.5.3 抓包 TikTok Version 21.1.0 安装，登陆后观看视频、直播、评论、点赞、发布视频等模块都正常使用后，再从 App Store 升级至最新版方可使用！）
 #!author = baupiao666 
 #!homepage = https://raw.githubusercontent.com/anliya1/Notes/master/script/tiktok.plugin
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/TikTok.png
