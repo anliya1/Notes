@@ -5,7 +5,7 @@
 #!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/TikTok.png
 
 [Rewrite]
-#!TikTok解锁
+# TikTok解锁
 (?<=_region=)CN(?=&) 307 JP
 (?<=&mcc_mnc=)460[0-1][0-9](?=&) 307 44001
 ^(https:\/\/.+\.tiktokv\.com\/aweme\/)v2(\/feed\/) 307 $1v1$2
