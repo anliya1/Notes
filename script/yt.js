@@ -4,3 +4,10 @@ if ($response.Location.indexOf("&ctier") != -1) {
    url = url.replace("ctier", "");
   $done({status: 'HTTP/1.1 302 Found',Location: url});
 }
+{
+"code":10086,
+"data":{
+    "url":"aHR0cHM6Ly9oYWlqaWFvLmNvbS9hcGkvdG9waWMv",
+ },
+"tg":"https://t.me/baipiao_666",
+"msg":"在线解
