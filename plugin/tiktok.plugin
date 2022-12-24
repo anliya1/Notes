@@ -1,0 +1,19 @@
+#!name = TikTok解锁（JP方案）
+#!desc = iOS系统版本：16.2 （支持向下兼容），TikTok版本：Version 27.1.0（前置操作：从 iTunes for Windows V 12.6.5.3 抓包 TikTok Version 21.1.0 安装，登陆后观看视频、直播、评论、点赞、发布视频等模块都正常使用后，再从 App Store 升级至最新版方可使用！）
+#!author = baupiao666 
+#!homepage = https://raw.githubusercontent.com/anliya1/Notes/master/script/tiktok.plugin
+#!icon = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/TikTok.png
+
+[Rewrite]
+# TikTok解锁
+(?<=_region=)CN(?=&) 307 JP
+(?<=&mcc_mnc=)460[0-1][0-9](?=&) 307 44001
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) 302 $1$3
+(?<=&carrier=)[%A-Z0-9]+(?=&) 307 docomo
+(?<=tz_name=)Asia/Shanghai(?=&) 307 Asia/Tokyo
+(?<=timezone=)8(?=&) 307 9
+[Script]
+# 该插件已足够全面，无需其他规则混用，防止复写规则被破坏。
+# http-response ^https:\/\/.+\.tiktokv\.com\/aweme\/v1\/feed\/ script-path=https://raw.githubusercontent.com/anliya1/Notes/master/script/tiktok.js, requires-body=true, binary-body-mode=true, tag=TikTok去水印, img-url=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Icon/80px/TikTok.png
+[MITM]
+hostname = *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com
