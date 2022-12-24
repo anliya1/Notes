@@ -8,6 +8,6 @@
 [rule]
 
 [script]
-http-response ^https?:\/\/(www)?.+\.com\/api\/topic\/\d+ script-path=haijiao.js, requires-body = true, tag=视频解析, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Himalaya.png
+http-response ^https?:\/\/(www)?.+\.com\/api\/topic\/\d+ script-path=haijia.js, requires-body = true, tag=视频解析, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Himalaya.png
 [mitm]
 hostname = hjedd.com, www.haijiao.com, haijiao.com, www.hjedd.com,
