@@ -1,0 +1,13 @@
+#!name= 海角社区
+#!desc= 海角社区收费视频解析，封禁账号显示帖子
+#!author= baupiao666 
+#!homepage= https://t.me/baipiao_666
+#!icon= https://static6.tgstat.ru/channels/_0/c9/c95d440e68116ded5914b41bb8ed43db.jpg
+
+
+[rule]
+
+[script]
+http-response ^https?:\/\/(www)?.+\.com\/api\/topic\/\d+ script-path=haijiao.js, requires-body = true, tag=视频解析, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Himalaya.png
+[mitm]
+hostname = hjedd.com, www.haijiao.com, haijiao.com, www.hjedd.com,
