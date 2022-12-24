@@ -17,7 +17,7 @@ let body = {
       },
       "tags" : null,
       "videoStatus" : false,
-      "nickname" : "乱伦很刺激吖",
+      "nickname" : "帖子已被显示",
       "sex" : 1,
       "fansCount" : 27286,
       "diamondConsume" : 0,
